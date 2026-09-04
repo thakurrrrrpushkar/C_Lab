@@ -1,0 +1,35 @@
+#include <stdio.h>
+int main() 
+{
+//Write a C program to print “Hello World”.
+printf("Hello World!\n\n");
+//Write a C program to input two numbers and find their sum, difference, product, and quotient.
+int a, b, sum, dif, prod;
+float quo;
+printf("Enter the first number: ");
+scanf("%d", &a);
+printf("Enter the second number: ");
+scanf("%d", &b);
+sum = a + b;
+dif = a - b;
+prod = a * b;
+quo = a / b;
+printf("Sum        : %d", sum);
+printf("\nDifference : %d", dif);
+printf("\nProduct    : %d", prod);
+printf("\nQuotient   : %f", quo);
+//Write a C program to calculate the area and circumference of a circle.
+const float Pi = 3.14159;
+int radius;
+float circ, ar;
+printf("\n\nEnter the radius of the circle: ");
+scanf("%d", &radius);
+ar = Pi * radius * radius;
+circ = 2 * Pi * radius;
+printf("\nCircumference of the circle :  %f", circ);
+printf("\nArea of the circle          :  %f", ar);
+//Write a C program to swap two numbers.(with or without temporary variable)
+//Write a C program to demonstrate printf() and scanf().
+//Write a C program to demonstrate getchar(), putchar(), puts(), and fgets().
+//Write a C program to read a student's name, roll number, and marks and display them.
+}

@@ -1,0 +1,9 @@
+A1: 
+Computer languages are tools to give instructions to the machine to execute. These languages span from low-level types (such as binary machine code and assembly) to high-level languages like C++ and Python.
+The primary difference between them is that High-level is human-readable, whereas low-levels are either non human-readable, or are extremely simplified human language.
+A programmer first creates an algorithm for the program, and then write the source code accordingly.
+This source code passes through a preprocessor, which expands macros, strips comments, and include header files. 
+Next, the compiler checks for syntax errors and translates the expanded source code into low-level object code. 
+The linker then combines these object files with required external libraries to give out an executable binary file. 
+This executable is invocated, which takes place when a user triggers it; signaling the operating system's loader to allocate memory in RAM. 
+Finally, execution occurs as the CPU reads these loaded instructions sequentially from the main function to perform the task.

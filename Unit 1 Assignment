@@ -1,0 +1,99 @@
+A1: 
+Programming is the process of writing instructions using computer languages to solve problems and automate tasks.
+Computer languages are tools to give instructions to the machine to execute. These languages span from low-level types (such as binary machine code and assembly) to high-level languages like C++ and Python.
+The primary difference between them is that High-level is human-readable, whereas low-levels are either non human-readable, or are extremely simplified human language.
+A programmer first creates an algorithm for the program, and then write the source code accordingly.
+This source code passes through a preprocessor, which expands macros, strips comments, and include header files. 
+Next, the compiler checks for syntax errors and translates the expanded source code into low-level object code. 
+The linker then combines these object files with required external libraries to give out an executable binary file. 
+This executable is invocated, which takes place when a user triggers it; signaling the operating system's loader to allocate memory in RAM. 
+Finally, execution occurs as the CPU reads these loaded instructions sequentially from the main function to perform the task.
+
+A2:
+An algorithm is a step-by-step sequence of well-defined instructions designed to solve a specific problem or perform a task.
+Algorithms can be represented in Pseudocode or Flowcharts.
+Pseudocode: A high-level code-like representation that uses programming constructs (like INPUT, OUTPUT, IF-ELSE) without strict language syntax.
+Flowcharts: A visual representation of the flow of the program using standardized symbols.
+Example problem:
+  Algorithm:-
+    Step 1: Start.
+    Step 2: Read/Input the values of Basic Salary, HRA (House Rent Allowance), and DA (Dearness Allowance)
+    Step 3: Calculate Gross Salary by adding Basic Salary, HRA, and DA.
+    Step 4: Display/Print the calculated Gross Salary.
+    Step 5: Stop.
+  Pseudocode:-
+    BEGIN
+      READ basic_salary, hra, da
+      gross_salary = basic_salary + hra + da
+      PRINT gross_salary
+    END
+  FlowChart:-
+    Oval(START) -> ||gm(INPUT basic_salary, hra, da) -> Rectangle(gross_salary = basic_salary + hra + da) -> ||gm(PRINT gross_salary) -> Oval(STOP)
+
+A3:
+A C program is divided into six logical sections:
+/* 1. Documentation Section: Program description or author details */
+// 2. Preprocessor Section
+#include <stdio.stdio.h> 
+// 3. Definition Section
+#define PI 3.14159
+// 4. Global Declaration Section
+int global_counter = 0;
+// 5. Main Function Section
+int main() {
+    // Variable Declaration & Code Execution
+    printf("Hello, World!\n");
+    return 0; // Exit status
+}
+// 6. Sub-program / User-defined Functions Section
+void customFunction() {
+    // Function logic
+}
+ 
+C source code is broken down into six main types of tokens:
+1. Tokens
+A Token is the smallest individual unit in a C program readable by the compiler. In the code snippet "int age = 20;", the tokens are 'int', 'age', '=','20', and ';'.
+2. Keywords
+They are reserved words that have a predefined, fixed meaning in the C compiler. C contains 32 standard keywords. Examples: int, float, if, else, while, return, struct, const.
+3. Identifiers
+They are user-defined names given to program elements like variables, functions, arrays, or structures. Examples: _total, var1, etc.
+4. Constants
+These are fixed numeric or character values that do not change during program execution. Example: 9, 'A', etc.
+5. Strings
+A sequence of characters enclosed within double quotes (" ") is a string. Example: "Hello."
+6. Special Symbols
+Characters that have unique grammatical meanings within C programs.
+Examples: [], (), {}, *, etc.
+
+A variable is a named location in memory used to store data that can be altered during execution. Data types specify the type, size, and range of data stored in a variable.
+Data Types Examples:
+  int - 5, 203, -193
+  float - 5.63, -6.63
+  double - 3.14159265
+  char - 'A', 'X'
+  arrays - marks[5], list[10]
+
+A4:
+#include <stdio.h>
+int main() 
+{
+    int val1, val2;
+    int sum, diff, prod;
+    float quotient, average;
+    printf("Enter first integer: ");
+    scanf("%d", &val1);
+    printf("Enter second integer: ");
+    scanf("%d", &val2);
+    sum = val1 + val2;
+    diff = val1 - val2;
+    prod = val1 * val2;
+    quotient = (float)val1 / val2;  //Explicit Type Conversion (Type Casting); Force floating-point division on integer inputs using (float)
+    average = (sum * 1.0f) / 2;     // Implicit Type Conversion (Coercion); 'sum' (int) is implicitly promoted to float when multiplied by 1.0f
+    printf("\n--- Calculation Results ---\n");
+    printf("Sum        : %d\n", sum);
+    printf("Difference : %d\n", diff);
+    printf("Product    : %d\n", prod);
+    printf("Quotient   : %.2f\n", quotient);
+    printf("Average    : %.2f\n", average);
+    return 0;
+}

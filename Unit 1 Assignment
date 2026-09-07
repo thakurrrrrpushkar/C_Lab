@@ -72,3 +72,28 @@ Data Types Examples:
   double - 3.14159265
   char - 'A', 'X'
   arrays - marks[5], list[10]
+
+A4:
+#include <stdio.h>
+int main() 
+{
+    int val1, val2;
+    int sum, diff, prod;
+    float quotient, average;
+    printf("Enter first integer: ");
+    scanf("%d", &val1);
+    printf("Enter second integer: ");
+    scanf("%d", &val2);
+    sum = val1 + val2;
+    diff = val1 - val2;
+    prod = val1 * val2;
+    quotient = (float)val1 / val2;  //Explicit Type Conversion (Type Casting); Force floating-point division on integer inputs using (float)
+    average = (sum * 1.0f) / 2;     // Implicit Type Conversion (Coercion); 'sum' (int) is implicitly promoted to float when multiplied by 1.0f
+    printf("\n--- Calculation Results ---\n");
+    printf("Sum        : %d\n", sum);
+    printf("Difference : %d\n", diff);
+    printf("Product    : %d\n", prod);
+    printf("Quotient   : %.2f\n", quotient);
+    printf("Average    : %.2f\n", average);
+    return 0;
+}

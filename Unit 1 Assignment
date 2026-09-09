@@ -1,13 +1,15 @@
 A1: 
-Programming is the process of writing instructions using computer languages to solve problems and automate tasks.
-Computer languages are tools to give instructions to the machine to execute. These languages span from low-level types (such as binary machine code and assembly) to high-level languages like C++ and Python.
-The primary difference between them is that High-level is human-readable, whereas low-levels are either non human-readable, or are extremely simplified human language.
-A programmer first creates an algorithm for the program, and then write the source code accordingly.
-This source code passes through a preprocessor, which expands macros, strips comments, and include header files. 
-Next, the compiler checks for syntax errors and translates the expanded source code into low-level object code. 
-The linker then combines these object files with required external libraries to give out an executable binary file. 
-This executable is invocated, which takes place when a user triggers it; signaling the operating system's loader to allocate memory in RAM. 
-Finally, execution occurs as the CPU reads these loaded instructions sequentially from the main function to perform the task.
+Programming is the systematic process of formulating instructions in computer languages to solve complex problems and automate operational tasks. 
+These languages serve as the primary interface for directing machine execution, spanning a spectrum from low-level variants, such as binary machine code and assembly, to high-level alternatives like C++ and Python. 
+The fundamental distinction lies in readability: high-level languages closely emulate human language for accessibility, whereas 
+low-level languages remain largely unreadable to humans or consist of heavily abstracted machine commands.
+The translation of human code into machine-readable code has a structured cycle:
+
+* Algorithm Creation and Coding: The development process begins with the design of a logical algorithm, based on which the programmer subsequently creates the source code.
+* Preprocessing: The raw source code undergoes preprocessing, a phase wherein macros are expanded, comments are removed, and necessary header files are integrated.
+* Compilation: A compiler subsequently inspects the expanded code for syntax errors and converts it into low-level object code.
+* Linking: A linker combines these code pieces with necessary external libraries to create a single file that the computer can run.
+* Execution: Upon invocation, the operating system's loader allocates appropriate memory within the RAM for the CPU to execute the loaded instructions.
 
 A2:
 An algorithm is a step-by-step sequence of well-defined instructions designed to solve a specific problem or perform a task.

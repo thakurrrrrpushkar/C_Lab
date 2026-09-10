@@ -86,47 +86,73 @@ Stop the process.
 Oval(START) -> ||gm(INPUT basic_salary, hra, da) -> Rectangle(gross_salary = basic_salary + hra + da) -> ||gm(PRINT gross_salary) -> Oval(STOP)
 
 A3:
-A C program is divided into six logical sections:
-/* 1. Documentation Section: Program description or author details */
-// 2. Preprocessor Section
-#include <stdio.stdio.h> 
-// 3. Definition Section
-#define PI 3.14159
-// 4. Global Declaration Section
-int global_counter = 0;
-// 5. Main Function Section
-int main() {
-    // Variable Declaration & Code Execution
-    printf("Hello, World!\n");
-    return 0; // Exit status
-}
-// 6. Sub-program / User-defined Functions Section
-void customFunction() {
-    // Function logic
-}
- 
-C source code is broken down into six main types of tokens:
-1. Tokens
-A Token is the smallest individual unit in a C program readable by the compiler. In the code snippet "int age = 20;", the tokens are 'int', 'age', '=','20', and ';'.
-2. Keywords
-They are reserved words that have a predefined, fixed meaning in the C compiler. C contains 32 standard keywords. Examples: int, float, if, else, while, return, struct, const.
-3. Identifiers
-They are user-defined names given to program elements like variables, functions, arrays, or structures. Examples: _total, var1, etc.
-4. Constants
-These are fixed numeric or character values that do not change during program execution. Example: 9, 'A', etc.
-5. Strings
-A sequence of characters enclosed within double quotes (" ") is a string. Example: "Hello."
-6. Special Symbols
-Characters that have unique grammatical meanings within C programs.
-Examples: [], (), {}, *, etc.
+The C programming language follows a structured, modular format. 
+A standard C program is built using a collection of functions, preprocessor directives, variable declarations, and statements.
 
-A variable is a named location in memory used to store data that can be altered during execution. Data types specify the type, size, and range of data stored in a variable.
-Data Types Examples:
-  int - 5, 203, -193
-  float - 5.63, -6.63
-  double - 3.14159265
-  char - 'A', 'X'
-  arrays - marks[5], list[10]
+**Basic Structure of a C Program:
+
+/* Documentation Section: Program description, author, date */
+#include <stdio.h>    // Link Section: Preprocessor directives
+#define MAX 100       // Definition Section: Macro definitions
+int global_var = 10;  // Global Declaration Section
+// Main Function Section
+int main() {
+    // Declaration Section
+    int local_var = 5;
+    // Executable Section
+    printf("The value of global variable is %d\n", global_var);
+    printf("The value of local variable is %d\n", local_var);
+    
+    return 0; // Return statement
+}
+
+**Tokens
+The smallest individual units in a C program are known as tokens. The compiler recognizes these tokens when analyzing source code. 
+Tokens include keywords, identifiers, constants, strings, special symbols, and operators.
+
+1. Keywords
+Keywords are predefined, reserved words in C that have special, fixed meanings to the compiler. They cannot be used as variable names.
+Examples: int, float, char, if, else, while, for, return, void.
+
+2. Identifiers
+Identifiers are user-defined names given to various program elements, such as variables, functions, arrays, and structures. They are created by the programmer following specific naming rules.
+Examples: basic_salary, totalCount, sum_value, student_age.
+
+3. Constants
+Constants are fixed values that do not change during the execution of a program. They can be integer constants, floating-point constants, character constants, or string constants.
+Examples: 100 (integer constant), 3.14159 (float constant), 'A' (character constant).
+
+4. Strings
+A string is a sequence of characters terminated by a null character (\0). In C, strings are treated as arrays of characters enclosed within double quotes.
+Examples: "Hello, World!", "Programming in C".
+
+5. Special Symbols
+Certain characters have special semantic meanings in C and cannot be used casually outside of their designated contexts. They control structure, formatting, and operations.
+
+Examples:
+Brackets [ ]: Used for array subscripting.
+Parentheses ( ): Used for function calls and expression grouping.
+Braces { }: Used to define the start and end of blocks of code.
+Semicolon ;: Acts as a statement terminator.
+Hash #: Used for preprocessor directives.
+
+6. Variables
+A variable is a named storage location in the computer's memory that holds a value which can be modified during program execution. 
+Every variable in C must be declared with a specific data type before it is used.
+Example: int age = 25; (here, age is a variable of type int storing the value 25).
+
+7. Data Types
+Data types specify the type of data a variable can hold, how much memory space it occupies, and what operations can be performed on it. C data types are broadly classified into categories:
+
+*Primary (Basic) Data Types:
+int: Used for whole numbers (e.g., int count = 10;).
+float: Used for single-precision decimal numbers (e.g., float temp = 98.6;).
+double: Used for double-precision decimal numbers requiring higher accuracy (e.g., double pi = 3.1415926535;).
+char: Used for single characters (e.g., char grade = 'A';).
+
+*Derived Data Types: Arrays, functions, pointers, and structures.
+
+*Void Data Type: Represents an empty set of values or the absence of a return type.
 
 A4:
 #include <stdio.h>

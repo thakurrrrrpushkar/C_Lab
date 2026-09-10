@@ -22,26 +22,28 @@ The preprocessor is a system tool that scans your source code before actual comp
 It handles these directives by performing text substitution. For instance, it physically copies and pastes the contents of standard header files directly into your file or replaces symbolic constants with their actual values. 
 The output of this stage is an expanded source file, cleared of all directives and ready for translation.
 
-Compilation
-Once the code is preprocessed, it moves to the compiler. The compiler is a specialized software translation program that takes the expanded high-level source code and translates it into machine-readable code, usually called object code or machine code (saved as a .obj or .o file).
-
+*Compilation
+Once the code is preprocessed, it moves to the compiler. The compiler is a specialized software translation program that takes the expanded high-level source code and translates it 
+into machine-readable code, usually called object code or machine code (saved as a .obj file).
 During this phase, the compiler performs two major tasks:
 
-Syntax Analysis: It checks your code for grammatical and structural mistakes according to the rules of the programming language. If you miss a semicolon, misspell a keyword, or mismanage a bracket, the compiler stops and generates error messages.
-
+Syntax Analysis: It checks your code for syntax errors. If you miss a semicolon, misspell a keyword, or mismanage a bracket, the compiler stops and generates error messages.
 Code Generation: If the code is error-free, the compiler translates the human-readable instructions into low-level object code specific to the target computer's architecture.
 
-Linker
-Even after successful compilation, a program is rarely complete on its own. Most programs rely on pre-written library functions—such as mathematical functions (sqrt, pow) or input/output functions (printf, scanf)—that live outside your source file.
+*Linker
+Even after successful compilation, a program is rarely complete on its own. Most programs rely on pre-written library functions, or input/output functions that live outside your source file.
+The linker is a utility program that takes one or more object files produced by the compiler and combines them with necessary pre-compiled library routines. 
+It resolves references between different files, connects all the scattered pieces, and binds them together to form a single, unified, and executable file.
 
-The linker is a utility program that takes one or more object files produced by the compiler and combines them with necessary pre-compiled library routines. It resolves references between different files, connects all the scattered pieces, and binds them together to form a single, unified, and executable file (typically ending with .exe on Windows).
-
-Invocation and Execution
+*Invocation and Execution
 The final stages of the software pipeline are invocation and execution:
 
-Invocation: This is the act of calling or launching the compiled program. When you double-click an application icon, type its name in a command prompt, or run it from an integrated development environment (IDE), the operating system's loader is invoked. The loader reads the executable file from the storage disk and copies its contents into the computer's primary memory (RAM).
-
-Execution: Once the program resides in RAM, the operating system hands over control of the CPU to the program. The CPU fetches instructions one by one from memory, decodes them, performs the necessary calculations or data transfers, and produces the desired output. The program continues to execute until it reaches a termination point or encounters an explicit exit command, at which point the operating system reclaims the allocated memory resources.
+Invocation: This is the act of calling or launching the compiled program. 
+When you double-click an application icon, type its name in a command prompt, or run it from an integrated development environment (IDE), the operating system's loader is invoked. 
+The loader reads the executable file from the storage disk and copies its contents into the computer's primary memory (RAM).
+Execution: Once the program resides in RAM, the operating system hands over control of the CPU to the program. 
+The CPU fetches instructions one by one from memory, decodes them, performs the necessary calculations or data transfers, and produces the desired output. 
+The program continues to execute until it reaches a termination point or encounters an explicit exit command, at which point the operating system reclaims the allocated memory resources.
 
 A2:
 An algorithm is a step-by-step sequence of well-defined instructions designed to solve a specific problem or perform a task.

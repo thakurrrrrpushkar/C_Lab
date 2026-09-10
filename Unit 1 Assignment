@@ -22,90 +22,137 @@ The preprocessor is a system tool that scans your source code before actual comp
 It handles these directives by performing text substitution. For instance, it physically copies and pastes the contents of standard header files directly into your file or replaces symbolic constants with their actual values. 
 The output of this stage is an expanded source file, cleared of all directives and ready for translation.
 
-Compilation
-Once the code is preprocessed, it moves to the compiler. The compiler is a specialized software translation program that takes the expanded high-level source code and translates it into machine-readable code, usually called object code or machine code (saved as a .obj or .o file).
-
+*Compilation
+Once the code is preprocessed, it moves to the compiler. The compiler is a specialized software translation program that takes the expanded high-level source code and translates it 
+into machine-readable code, usually called object code or machine code (saved as a .obj file).
 During this phase, the compiler performs two major tasks:
 
-Syntax Analysis: It checks your code for grammatical and structural mistakes according to the rules of the programming language. If you miss a semicolon, misspell a keyword, or mismanage a bracket, the compiler stops and generates error messages.
-
+Syntax Analysis: It checks your code for syntax errors. If you miss a semicolon, misspell a keyword, or mismanage a bracket, the compiler stops and generates error messages.
 Code Generation: If the code is error-free, the compiler translates the human-readable instructions into low-level object code specific to the target computer's architecture.
 
-Linker
-Even after successful compilation, a program is rarely complete on its own. Most programs rely on pre-written library functions—such as mathematical functions (sqrt, pow) or input/output functions (printf, scanf)—that live outside your source file.
+*Linker
+Even after successful compilation, a program is rarely complete on its own. Most programs rely on pre-written library functions, or input/output functions that live outside your source file.
+The linker is a utility program that takes one or more object files produced by the compiler and combines them with necessary pre-compiled library routines. 
+It resolves references between different files, connects all the scattered pieces, and binds them together to form a single, unified, and executable file.
 
-The linker is a utility program that takes one or more object files produced by the compiler and combines them with necessary pre-compiled library routines. It resolves references between different files, connects all the scattered pieces, and binds them together to form a single, unified, and executable file (typically ending with .exe on Windows).
-
-Invocation and Execution
+*Invocation and Execution
 The final stages of the software pipeline are invocation and execution:
 
-Invocation: This is the act of calling or launching the compiled program. When you double-click an application icon, type its name in a command prompt, or run it from an integrated development environment (IDE), the operating system's loader is invoked. The loader reads the executable file from the storage disk and copies its contents into the computer's primary memory (RAM).
-
-Execution: Once the program resides in RAM, the operating system hands over control of the CPU to the program. The CPU fetches instructions one by one from memory, decodes them, performs the necessary calculations or data transfers, and produces the desired output. The program continues to execute until it reaches a termination point or encounters an explicit exit command, at which point the operating system reclaims the allocated memory resources.
+Invocation: This is the act of calling or launching the compiled program. 
+When you double-click an application icon, type its name in a command prompt, or run it from an integrated development environment (IDE), the operating system's loader is invoked. 
+The loader reads the executable file from the storage disk and copies its contents into the computer's primary memory (RAM).
+Execution: Once the program resides in RAM, the operating system hands over control of the CPU to the program. 
+The CPU fetches instructions one by one from memory, decodes them, performs the necessary calculations or data transfers, and produces the desired output. 
+The program continues to execute until it reaches a termination point or encounters an explicit exit command, at which point the operating system reclaims the allocated memory resources.
 
 A2:
-An algorithm is a step-by-step sequence of well-defined instructions designed to solve a specific problem or perform a task.
-Algorithms can be represented in Pseudocode or Flowcharts.
-Pseudocode: A high-level code-like representation that uses programming constructs (like INPUT, OUTPUT, IF-ELSE) without strict language syntax.
-Flowcharts: A visual representation of the flow of the program using standardized symbols.
-Example problem:
-  Algorithm:-
-    Step 1: Start.
-    Step 2: Read/Input the values of Basic Salary, HRA (House Rent Allowance), and DA (Dearness Allowance)
-    Step 3: Calculate Gross Salary by adding Basic Salary, HRA, and DA.
-    Step 4: Display/Print the calculated Gross Salary.
-    Step 5: Stop.
-  Pseudocode:-
+An algorithm is a step-by-step procedure or set of rules designed to solve a specific problem or complete a particular task. 
+An effective algorithm must always terminate after a finite number of steps, must be precisely defined, must use zero or more well-defined inputs, and must produce at least one well-defined output.
+
+**Representations of Algorithms
+To communicate an algorithm to humans or computers, we use standard descriptive tools before writing actual code:
+*Pseudocode: An informal, high-level description of a computer program or algorithm. 
+It uses the structural conventions of programming languages but is intended for human reading rather than machine reading. 
+It avoids strict syntax rules, letting the programmer focus purely on the logic.
+
+*Flowchart: A graphical or pictorial representation of an algorithm. 
+It uses standardized geometric shapes (boxes, diamonds, ovals) connected by arrows to show the direction of data flow and the sequence of logical operations.
+
+**Algorithm to Calculate Gross Salary:
+
+Start the process.
+Read or input the employee's Basic Salary.
+Calculate House Rent Allowance (HRA) as a percentage of Basic Salary (e.g., $HRA = Basic \times 0.20$).
+Calculate Dearness Allowance (DA) as a percentage of Basic Salary (e.g., $DA = Basic \times 0.40$).
+Calculate Gross Salary by adding Basic Salary, HRA, and DA:
+$$Gross = Basic + HRA + DA$$
+Display the calculated Gross Salary.
+Stop the process.
+
+**Pseudocode:
+
     BEGIN
-      READ basic_salary, hra, da
+      DECLARE basic_salary, hra, da, gross_salary AS FLOAT
+      PRINT "Enter the basic salary of the employee: "
+      READ basic_salary
+      hra = basic_salary * 0.20
+      da = basic_salary * 0.40
       gross_salary = basic_salary + hra + da
-      PRINT gross_salary
+      PRINT "The gross salary is: ", gross_salary
     END
-  FlowChart:-
-    Oval(START) -> ||gm(INPUT basic_salary, hra, da) -> Rectangle(gross_salary = basic_salary + hra + da) -> ||gm(PRINT gross_salary) -> Oval(STOP)
+
+**Flowchart Structure:
+
+Oval(START) -> ||gm(INPUT basic_salary, hra, da) -> Rectangle(gross_salary = basic_salary + hra + da) -> ||gm(PRINT gross_salary) -> Oval(STOP)
 
 A3:
-A C program is divided into six logical sections:
-/* 1. Documentation Section: Program description or author details */
-// 2. Preprocessor Section
-#include <stdio.stdio.h> 
-// 3. Definition Section
-#define PI 3.14159
-// 4. Global Declaration Section
-int global_counter = 0;
-// 5. Main Function Section
-int main() {
-    // Variable Declaration & Code Execution
-    printf("Hello, World!\n");
-    return 0; // Exit status
-}
-// 6. Sub-program / User-defined Functions Section
-void customFunction() {
-    // Function logic
-}
- 
-C source code is broken down into six main types of tokens:
-1. Tokens
-A Token is the smallest individual unit in a C program readable by the compiler. In the code snippet "int age = 20;", the tokens are 'int', 'age', '=','20', and ';'.
-2. Keywords
-They are reserved words that have a predefined, fixed meaning in the C compiler. C contains 32 standard keywords. Examples: int, float, if, else, while, return, struct, const.
-3. Identifiers
-They are user-defined names given to program elements like variables, functions, arrays, or structures. Examples: _total, var1, etc.
-4. Constants
-These are fixed numeric or character values that do not change during program execution. Example: 9, 'A', etc.
-5. Strings
-A sequence of characters enclosed within double quotes (" ") is a string. Example: "Hello."
-6. Special Symbols
-Characters that have unique grammatical meanings within C programs.
-Examples: [], (), {}, *, etc.
+The C programming language follows a structured, modular format. 
+A standard C program is built using a collection of functions, preprocessor directives, variable declarations, and statements.
 
-A variable is a named location in memory used to store data that can be altered during execution. Data types specify the type, size, and range of data stored in a variable.
-Data Types Examples:
-  int - 5, 203, -193
-  float - 5.63, -6.63
-  double - 3.14159265
-  char - 'A', 'X'
-  arrays - marks[5], list[10]
+**Basic Structure of a C Program:
+
+/* Documentation Section: Program description, author, date */
+#include <stdio.h>    // Link Section: Preprocessor directives
+#define MAX 100       // Definition Section: Macro definitions
+int global_var = 10;  // Global Declaration Section
+// Main Function Section
+int main() {
+    // Declaration Section
+    int local_var = 5;
+    // Executable Section
+    printf("The value of global variable is %d\n", global_var);
+    printf("The value of local variable is %d\n", local_var);
+    
+    return 0; // Return statement
+}
+
+**Tokens
+The smallest individual units in a C program are known as tokens. The compiler recognizes these tokens when analyzing source code. 
+Tokens include keywords, identifiers, constants, strings, special symbols, and operators.
+
+1. Keywords
+Keywords are predefined, reserved words in C that have special, fixed meanings to the compiler. They cannot be used as variable names.
+Examples: int, float, char, if, else, while, for, return, void.
+
+2. Identifiers
+Identifiers are user-defined names given to various program elements, such as variables, functions, arrays, and structures. They are created by the programmer following specific naming rules.
+Examples: basic_salary, totalCount, sum_value, student_age.
+
+3. Constants
+Constants are fixed values that do not change during the execution of a program. They can be integer constants, floating-point constants, character constants, or string constants.
+Examples: 100 (integer constant), 3.14159 (float constant), 'A' (character constant).
+
+4. Strings
+A string is a sequence of characters terminated by a null character (\0). In C, strings are treated as arrays of characters enclosed within double quotes.
+Examples: "Hello, World!", "Programming in C".
+
+5. Special Symbols
+Certain characters have special semantic meanings in C and cannot be used casually outside of their designated contexts. They control structure, formatting, and operations.
+
+Examples:
+Brackets [ ]: Used for array subscripting.
+Parentheses ( ): Used for function calls and expression grouping.
+Braces { }: Used to define the start and end of blocks of code.
+Semicolon ;: Acts as a statement terminator.
+Hash #: Used for preprocessor directives.
+
+6. Variables
+A variable is a named storage location in the computer's memory that holds a value which can be modified during program execution. 
+Every variable in C must be declared with a specific data type before it is used.
+Example: int age = 25; (here, age is a variable of type int storing the value 25).
+
+7. Data Types
+Data types specify the type of data a variable can hold, how much memory space it occupies, and what operations can be performed on it. C data types are broadly classified into categories:
+
+*Primary (Basic) Data Types:
+int: Used for whole numbers (e.g., int count = 10;).
+float: Used for single-precision decimal numbers (e.g., float temp = 98.6;).
+double: Used for double-precision decimal numbers requiring higher accuracy (e.g., double pi = 3.1415926535;).
+char: Used for single characters (e.g., char grade = 'A';).
+
+*Derived Data Types: Arrays, functions, pointers, and structures.
+
+*Void Data Type: Represents an empty set of values or the absence of a return type.
 
 A4:
 #include <stdio.h>
@@ -121,8 +168,8 @@ int main()
     sum = val1 + val2;
     diff = val1 - val2;
     prod = val1 * val2;
-    quotient = (float)val1 / val2;  //Explicit Type Conversion (Type Casting); Force floating-point division on integer inputs using (float)
-    average = (sum * 1.0f) / 2;     // Implicit Type Conversion (Coercion); 'sum' (int) is implicitly promoted to float when multiplied by 1.0f
+    quotient = (float)val1 / val2;  
+    average = (sum * 1.0f) / 2;     
     printf("\n--- Calculation Results ---\n");
     printf("Sum        : %d\n", sum);
     printf("Difference : %d\n", diff);
@@ -131,3 +178,9 @@ int main()
     printf("Average    : %.2f\n", average);
     return 0;
 }
+
+printf prints clear instructions and results directly to the screen, while scanf takes whatever integer the user types and safely stores it into val1 and val2 using the address operator (&).
+The program also handles type conversion smoothly to ensure the math remains accurate. In C, dividing two whole numbers normally drops any fractional remainder. 
+To prevent this, this code uses two effective approaches:
+For the quotient: Writing (float)val1 temporarily changes val1 into a decimal number. This forces C to perform standard decimal division rather than throwing away the remainder.
+For the average: Multiplying the total sum by 1.0f promotes the numerator into a floating-point value. Dividing that decimal result by 2 ensures the final average retains its precise decimal value.

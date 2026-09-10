@@ -168,8 +168,8 @@ int main()
     sum = val1 + val2;
     diff = val1 - val2;
     prod = val1 * val2;
-    quotient = (float)val1 / val2;  //Explicit Type Conversion (Type Casting); Force floating-point division on integer inputs using (float)
-    average = (sum * 1.0f) / 2;     // Implicit Type Conversion (Coercion); 'sum' (int) is implicitly promoted to float when multiplied by 1.0f
+    quotient = (float)val1 / val2;  
+    average = (sum * 1.0f) / 2;     
     printf("\n--- Calculation Results ---\n");
     printf("Sum        : %d\n", sum);
     printf("Difference : %d\n", diff);
@@ -178,3 +178,9 @@ int main()
     printf("Average    : %.2f\n", average);
     return 0;
 }
+
+printf prints clear instructions and results directly to the screen, while scanf takes whatever integer the user types and safely stores it into val1 and val2 using the address operator (&).
+The program also handles type conversion smoothly to ensure the math remains accurate. In C, dividing two whole numbers normally drops any fractional remainder. 
+To prevent this, this code uses two effective approaches:
+For the quotient: Writing (float)val1 temporarily changes val1 into a decimal number. This forces C to perform standard decimal division rather than throwing away the remainder.
+For the average: Multiplying the total sum by 1.0f promotes the numerator into a floating-point value. Dividing that decimal result by 2 ensures the final average retains its precise decimal value.

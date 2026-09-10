@@ -46,25 +46,44 @@ The CPU fetches instructions one by one from memory, decodes them, performs the 
 The program continues to execute until it reaches a termination point or encounters an explicit exit command, at which point the operating system reclaims the allocated memory resources.
 
 A2:
-An algorithm is a step-by-step sequence of well-defined instructions designed to solve a specific problem or perform a task.
-Algorithms can be represented in Pseudocode or Flowcharts.
-Pseudocode: A high-level code-like representation that uses programming constructs (like INPUT, OUTPUT, IF-ELSE) without strict language syntax.
-Flowcharts: A visual representation of the flow of the program using standardized symbols.
-Example problem:
-  Algorithm:-
-    Step 1: Start.
-    Step 2: Read/Input the values of Basic Salary, HRA (House Rent Allowance), and DA (Dearness Allowance)
-    Step 3: Calculate Gross Salary by adding Basic Salary, HRA, and DA.
-    Step 4: Display/Print the calculated Gross Salary.
-    Step 5: Stop.
-  Pseudocode:-
+An algorithm is a step-by-step procedure or set of rules designed to solve a specific problem or complete a particular task. 
+An effective algorithm must always terminate after a finite number of steps, must be precisely defined, must use zero or more well-defined inputs, and must produce at least one well-defined output.
+
+**Representations of Algorithms
+To communicate an algorithm to humans or computers, we use standard descriptive tools before writing actual code:
+*Pseudocode: An informal, high-level description of a computer program or algorithm. 
+It uses the structural conventions of programming languages but is intended for human reading rather than machine reading. 
+It avoids strict syntax rules, letting the programmer focus purely on the logic.
+
+*Flowchart: A graphical or pictorial representation of an algorithm. 
+It uses standardized geometric shapes (boxes, diamonds, ovals) connected by arrows to show the direction of data flow and the sequence of logical operations.
+
+**Algorithm to Calculate Gross Salary:
+
+Start the process.
+Read or input the employee's Basic Salary.
+Calculate House Rent Allowance (HRA) as a percentage of Basic Salary (e.g., $HRA = Basic \times 0.20$).
+Calculate Dearness Allowance (DA) as a percentage of Basic Salary (e.g., $DA = Basic \times 0.40$).
+Calculate Gross Salary by adding Basic Salary, HRA, and DA:
+$$Gross = Basic + HRA + DA$$
+Display the calculated Gross Salary.
+Stop the process.
+
+**Pseudocode:
+
     BEGIN
-      READ basic_salary, hra, da
+      DECLARE basic_salary, hra, da, gross_salary AS FLOAT
+      PRINT "Enter the basic salary of the employee: "
+      READ basic_salary
+      hra = basic_salary * 0.20
+      da = basic_salary * 0.40
       gross_salary = basic_salary + hra + da
-      PRINT gross_salary
+      PRINT "The gross salary is: ", gross_salary
     END
-  FlowChart:-
-    Oval(START) -> ||gm(INPUT basic_salary, hra, da) -> Rectangle(gross_salary = basic_salary + hra + da) -> ||gm(PRINT gross_salary) -> Oval(STOP)
+
+**Flowchart Structure:
+
+Oval(START) -> ||gm(INPUT basic_salary, hra, da) -> Rectangle(gross_salary = basic_salary + hra + da) -> ||gm(PRINT gross_salary) -> Oval(STOP)
 
 A3:
 A C program is divided into six logical sections:

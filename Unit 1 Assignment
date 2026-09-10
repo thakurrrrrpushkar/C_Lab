@@ -1,10 +1,10 @@
 A1: 
 Programming is the systematic process of formulating instructions in computer languages to solve complex problems and automate operational tasks. 
 These languages serve as the primary interface for directing machine execution, spanning a spectrum from low-level variants, such as binary machine code and assembly, to high-level alternatives like C++ and Python. 
-The fundamental distinction lies in readability: high-level languages closely emulate human language for accessibility, whereas 
-low-level languages remain largely unreadable to humans or consist of heavily abstracted machine commands.
-The translation of human code into machine-readable code has a structured cycle:
+The main difference between high-level and low-level languages is that high-level languages closely emulate human language for accessibility, whereas 
+low-level languages remain largely unreadable to humans or consist of heavily condensed machine commands.
 
+The translation of human code into machine-readable code has a structured cycle:
 * Algorithm Creation and Coding: The development process begins with the design of a logical algorithm, based on which the programmer subsequently creates the source code.
 * Preprocessing: The raw source code undergoes preprocessing, a phase wherein macros are expanded, comments are removed, and necessary header files are integrated.
 * Compilation: A compiler subsequently inspects the expanded code for syntax errors and converts it into low-level object code.

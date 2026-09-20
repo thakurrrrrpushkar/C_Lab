@@ -13,3 +13,13 @@ int main()
     return 0;
 }
 //Q2
+#include <stdio.h>
+int main()
+{
+    int x;
+    printf("Enter a whole number: ");
+    scanf("%d", &x);
+    printf((x % 2 == 0? "Even":"Odd"));
+    return 0;
+}
+//Q3

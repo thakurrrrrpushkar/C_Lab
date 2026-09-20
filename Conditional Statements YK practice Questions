@@ -1,0 +1,15 @@
+//Q1
+#include <stdio.h>
+int main()
+{
+    float cp, sp, tot;
+    printf("Enter the cost and selling prices respectively: ");
+    scanf("%f %f", &cp, &sp);
+    tot = sp - cp;
+    if (tot < 0)
+        printf("Seller incurred losses of %.2f", tot);
+    else
+        printf("Seller incurred profits of %.2f", tot);
+    return 0;
+}
+//Q2

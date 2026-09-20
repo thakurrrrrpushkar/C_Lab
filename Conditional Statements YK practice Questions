@@ -23,3 +23,12 @@ int main()
     return 0;
 }
 //Q3
+#include <stdio.h>
+int main()
+{
+    int yr;
+    printf("Enter a year: ");
+    scanf("%d", &yr);
+    printf((yr % 4 == 0? "It is a leap year.":"It is not a leap year."));
+    return 0;
+}

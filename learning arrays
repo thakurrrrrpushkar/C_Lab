@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main()
+{
+    int age[5];
+    printf("Enter 5 input values: ");
+    for(int i=0; i<5; i++)
+        scanf("%d", &age[i]);
+    printf("List elements: \n");
+    for(int i=0; i<5; i++)
+        printf("%d\n", age[i]);
+    // task
+    float marks[5];
+    float avg, sum = 0.00;
+    printf("Enter the marks of five subjects: ");
+    for(int i=0; i<5; i++)
+        scanf("%f", &marks[i]);
+    for(int i = 0; i<5; i++) 
+        sum += marks[i];
+    avg = sum/5;
+    printf("%f is the average of the student.", avg);
+}

@@ -171,3 +171,70 @@ int main()
   return 0;
 }
 //E12
+#include <stdio.h>
+int main()
+{
+  int num;
+  printf("Enter an integer: ");
+  scanf("%d", &num);
+  if (num % 2 == 0)
+  {
+    printf("%d is even.\n", num);
+  }
+  else
+  {
+    printf("%d is odd.\n", num);
+  }
+  return 0;
+}
+//E13
+#include <stdio.h>
+int main()
+{
+  int a, b, c;
+  printf("Enter three numbers: ");
+  scanf("%d %d %d", &a, &b, &c);
+  if (a >= b && a >= c)
+  {
+    printf("%d is the largest number.\n", a);
+  }
+  else if (b >= a && b >= c)
+  {
+    printf("%d is the largest number.\n", b);
+  }
+  else
+  {
+    printf("%d is the largest number.\n", c);
+  }
+  return 0;
+}
+//E14
+#include <stdio.h>
+int main()
+{
+  int marks;
+  printf("Enter your marks (out of 100): ");
+  scanf("%d", &marks);
+  if (marks >= 90)
+  {
+    printf("Grade A");
+  }
+  else if (marks >= 80)
+  {
+    printf("Grade B");
+  }
+  else if (marks >= 70)
+  {
+    printf("Grade C");
+  }
+  else if (marks >- 60)
+  {
+    printf("Grade D");
+  }
+  else
+  {
+    printf("Grade F (Fail)");
+  }
+  return 0;
+}
+//E20

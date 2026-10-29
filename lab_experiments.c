@@ -109,3 +109,65 @@ int main()
   return 0;
 }
 //E8
+#include <stdio.h>
+int main()
+{
+  float salary, shopping, final_salary, final_bill;
+  printf("Enter current salary: ");
+  scanf("%f", &salary);
+  printf("Enter shopping bill amount: ");
+  scanf("%f", &shopping);
+  final_salary = salary + (salary * 0.20);
+  final_bill = shopping - (shopping * 0.17);
+  printf("Salary after 20%% bonus: %.2f\n", final_salary);
+  printf("Bill after 17%% discount: %.2f\n", final_bill);
+  return 0;
+}
+//E9
+#include <stdio.h>
+int main()
+{
+  int num = 7;
+  float f_num = 5.5;
+  float implicit_res;
+  int explicit_res;
+  implicit_res = num + f_num;
+  explicit_res = (int)f_num;
+  printf("Implicit conversion result (float + int) = %.2f\n", implicit_res)
+  printf("Explicit conversion result (float cast to int) = %d\n", explicit_res);
+  return 0;
+}
+//E10
+#include <stdio.h>
+int main()
+{
+  int n1, n2, n3;
+  float avg;
+  printf("Enter three numbers: ");
+  scanf("%d %d %d", &n1, &n2, &n3);
+  avg = (float)(n1 + n2 + n3)/3.0;
+  printf("Average: %.2f\n", avg);
+  return 0;
+}
+//E11
+#include <stdio.h>
+int main()
+{
+  int num;
+  printf("Enter an integer: ")
+  scanf("%d", &num);
+  if (num > 0)
+  {
+    printf("%d is positive. \n", num);
+  }
+  else if (num < 0)
+  {
+    printf("%d is negative. \n", num);
+  }
+  else
+  {
+    printf("The number is zero.\n");
+  }
+  return 0;
+}
+//E12

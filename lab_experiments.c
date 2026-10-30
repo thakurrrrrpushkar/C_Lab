@@ -241,24 +241,24 @@ int main()
 #include <stdio.h>
 int main() {
     char operator;
-    double num1, num2;
+    float num1, num2;
     printf("Enter an operator (+, -, *, /): ");
     scanf("%c", &operator);
     printf("Enter two operands: ");
-    scanf("%lf %lf", &num1, &num2);
+    scanf("%f %f", &num1, &num2);
     switch (operator) {
         case '+':
-            printf("%.2lf + %.2lf = %.2lf\n", num1, num2, num1 + num2);
+            printf("%.2f + %.2f = %.2f\n", num1, num2, num1 + num2);
             break;
         case '-':
-            printf("%.2lf - %.2lf = %.2lf\n", num1, num2, num1 - num2);
+            printf("%.2f - %.2f = %.2f\n", num1, num2, num1 - num2);
             break;
         case '*':
-            printf("%.2lf * %.2lf = %.2lf\n", num1, num2, num1 * num2);
+            printf("%.2f * %.2f = %.2f\n", num1, num2, num1 * num2);
             break;
         case '/':
             if (num2 != 0)
-                printf("%.2lf / %.2lf = %.2lf\n", num1, num2, num1 / num2);
+                printf("%.2f / %.2f = %.2f\n", num1, num2, num1 / num2);
             else
                 printf("Error! Division by zero is not allowed.\n");
             break;
@@ -269,33 +269,39 @@ int main() {
 }
 //E16
 #include <stdio.h>
-int main() {
+int main() 
+{
     printf("Numbers from 1 to 10:\n");
-    for (int i = 1; i <= 10; i++) {
+    for (int i = 1; i <= 10; i++)
+      {
         printf("%d ", i);
-    }
+      }
     printf("\n");
     return 0;
 }
 //E17
 #include <stdio.h>
-int main() {
+int main() 
+{
     int num;
     printf("Enter an integer: ");
     scanf("%d", &num);
     printf("Multiplication table of %d:\n", num);
-    for (int i = 1; i <= 10; i++) {
+    for (int i = 1; i <= 10; i++) 
+    {
         printf("%d * %d = %d\n", num, i, num * i);
     }
     return 0;
 }
 //E18
 #include <stdio.h>
-int main() {
+int main() 
+{
     int n, sum = 0;
     printf("Enter a positive integer N: ");
     scanf("%d", &n);
-    for (int i = 1; i <= n; i++) {
+    for (int i = 1; i <= n; i++) 
+    {
         sum += i; 
     }
     printf("Sum of first %d natural numbers = %d\n", n, sum);
@@ -303,7 +309,8 @@ int main() {
 }
 //E19
 #include <stdio.h>
-int main() {
+int main() 
+{
     int n;
     int factorial = 1;
     printf("Enter a positive integer: ");
@@ -324,7 +331,8 @@ int main() {
 }
 //E20
 #include <stdio.h>
-int main() {
+int main() 
+{
     int arr1d[5];
     printf("--- 1D Array ---:\n");
     printf("Enter 5 integers:\n");
@@ -428,7 +436,8 @@ int main()
 // Function declarations
 int addTwo(int a, int b);
 int multiplyThree(int a, int b, int c);
-int main() {
+int main() 
+{
     int x = 5, y = 10;
     int n1 = 2, n2 = 3, n3 = 4;
     printf("Sum of %d and %d = %d\n", x, y, addTwo(x, y));
@@ -468,13 +477,15 @@ int main() {
 }
 //E25
 #include <stdio.h>
-int sumNatural(int n) {
+int sumNatural(int n) 
+{
     if (n != 0)
         return n + sumNatural(n - 1); 
     else
         return 0; 
 }
-int main() {
+int main() 
+{
     int n;
     printf("Enter a positive integer: ");
     scanf("%d", &n);
@@ -484,7 +495,8 @@ int main() {
 //E26
 #include <stdio.h>
 #include <string.h>
-int main() {
+int main() 
+{
     char str1[50] = "Hello";
     char str2[] = " World";
     char str3[50];
@@ -503,7 +515,8 @@ int main() {
 //E27
 #include <stdio.h>
 #include <string.h>
-int main() {
+int main()
+{
     char str[100];
     int length, isPalindrome = 1;
     printf("Enter a string: ");
@@ -523,7 +536,8 @@ int main() {
 }
 //E28
 #include <stdio.h>
-int main() {
+int main() 
+{
     int a[2][2] = {{1, 2}, {3, 4}};
     int b[2][2] = {{5, 6}, {7, 8}};
     int sum[2][2], mult[2][2] = {0};
@@ -557,12 +571,14 @@ int main() {
 }
 //E29
 #include <stdio.h>
-void swap(int *a, int *b) {
+void swap(int *a, int *b) 
+{
     int temp = *a;
     *a = *b;
     *b = temp;
 }
-int main() {
+int main() 
+{
     int num1 = 10, num2 = 20;
     int *ptr1 = &num1, *ptr2 = &num2;
     printf("Addresses:\n");
@@ -575,12 +591,14 @@ int main() {
 }
 //E30
 #include <stdio.h>
-struct Student {
+struct Student 
+{
     char name[50];
     int rollNo;
     float marks;
 };
-int main() {
+int main() 
+{
     struct Student s1;
     printf("Enter student name: ");
     scanf(" %[^\n]%*c", s1.name); 
